@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === OPTIMASI SEO ON-PAGE === -->
+    <title>Portofolio Profesional Irmayanti | Digital Strategist & UI/UX Enthusiast</title>
+    <meta name="description" content="Portofolio resmi Irmayanti, seorang mahasiswa kreatif, Digital Strategist, dan UI/UX Enthusiast yang berfokus pada inovasi digital dan efisiensi manajemen proyek.">
+    <meta name="keywords" content="Irmayanti, Portofolio Irmayanti, CV Mahasiswa, Digital Strategist, UI/UX Designer Indonesia, Portofolio Elegan">
+    <meta name="author" content="Irmayanti">
+    <meta name="robots" content="index, follow">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #121212;
+            --secondary-dark: #1e1e1e;
+            --accent-gold: #c5a880;
+            --accent-gold-hover: #b39366;
+            --text-muted: #7a7a7a;
+            --bg-light: #f9f9f7;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--primary-dark);
+            background-color: #ffffff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Custom */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .navbar-brand {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--primary-dark) !important;
+        }
+        .navbar-brand span {
+            color: var(--accent-gold);
+        }
+        .nav-link {
+            color: var(--primary-dark) !important;
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin: 0 10px;
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 160px 0 100px 0;
+            background-color: var(--bg-light);
+            position: relative;
+        }
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+        .hero-title span {
+            color: var(--accent-gold);
+            font-style: italic;
+            font-weight: 400;
+        }
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .hero-bio {
+            font-size: 1.15rem;
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            max-width: 600px;
+        }
+        .avatar-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .avatar-img {
+            width: 340px;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 4px;
+            filter: grayscale(30%);
+            box-shadow: 25px 25px 0px var(--accent-gold);
+            transition: all 0.5s ease;
+        }
+        .avatar-wrapper:hover .avatar-img {
+            filter: grayscale(0%);
+            transform: translate(5px, 5px);
+            box-shadow: 15px 15px 0px var(--accent-gold);
+        }
+
+        /* General Section Styling */
+        .section-padding {
+            padding: 100px 0;
+        }
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            bottom: -10px;
+            left: 0;
+        }
+
+        /* Buttons Custom */
+        .btn-elegant {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            padding: 12px 30px;
+            border-radius: 0;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--primary-dark);
+        }
+        .btn-elegant:hover {
+            background-color: transparent;
+            color: var(--primary-dark);
+        }
+        .btn-outline-elegant {
+            background-color: transparent;
+            color: var(--primary-dark);
+            padding: 12px 30px;
+            border-radius: 0;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--accent-gold);
+        }
+        .btn-outline-elegant:hover {
+            background-color: var(--accent-gold);
+            color: #ffffff;
+        }
+
+        /* Timeline / Experience */
+        .timeline-item {
+            padding-left: 30px;
+            border-left: 2px solid #eaeaea;
+            position: relative;
+            padding-bottom: 40px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background-color: var(--accent-gold);
+            border-radius: 50%;
+            left: -8px;
+            top: 5px;
+            transition: all 0.3s ease;
+        }
+        .timeline-item:hover::before {
+            background-color: var(--primary-dark);
+            transform: scale(1.3);
+        }
+        .timeline-date {
+            font-weight: 600;
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .timeline-company {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        /* Cards / Achievements */
+        .achievement-card {
+            border: none;
+            background-color: var(--bg-light);
+            border-radius: 4px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            background-color: var(--primary-dark);
+            color: #ffffff;
+        }
+        .achievement-card:hover .card-icon {
+            color: var(--accent-gold);
+        }
+        .achievement-card:hover .text-muted {
+            color: #a0a0a0 !important;
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Skills Badge */
+        .skill-badge {
+            background-color: var(--bg-light);
+            color: var(--primary-dark);
+            font-weight: 500;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 50px;
+            display: inline-block;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            background-color: var(--accent-gold);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            padding: 60px 0;
+        }
+        .footer-brand {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .footer-brand span {
+            color: var(--accent-gold);
+        }
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">IRMAYANTI<span>.</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Pengalaman</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Pencapaian</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <span class="hero-sub">Mahasiswa & Digital Strategist</span>
+                    <h1 class="hero-title">Membangun Jembatan antara Kreativitas & <span>Inovasi Digital</span></h1>
+                    <p class="hero-bio">
+                        Halo, saya <strong>Irmayanti</strong>. Sebagai seorang mahasiswa yang aktif bergerak di bidang teknologi dan manajemen strategi, saya mendedikasikan diri untuk merancang solusi digital yang tidak hanya fungsional, tetapi juga memiliki nilai estetika tinggi dan berdampak nyata bagi ekosistem bisnis modern.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#about" class="btn btn-elegant">Kenali Saya</a>
+                        <a href="#experience" class="btn btn-outline-elegant">Lihat Karir</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-end">
+                    <div class="avatar-wrapper">
+                        <!-- Menggunakan Placeholder Gambar Siluet Estetis Wanita Profesional -->
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600&h=750" alt="Irmayanti - Mahasiswa & Professional" class="avatar-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Tentang Saya</h2>
+                    <p class="lead fw-normal text-secondary mb-4">Seorang pembelajar sepanjang hayat yang fokus pada pengembangan ekosistem digital terintegrasi.</p>
+                    <p class="text-muted mb-4">
+                        Dilahirkan dengan antusiasme tinggi terhadap dunia teknologi dan interaksi manusia, saya memadukan ilmu akademis saya sebagai mahasiswa dengan praktik industri nyata. Saya percaya bahwa desain yang elegan berakar dari pemahaman mendalam tentang kebutuhan pengguna. Melalui analisis data yang tajam dan pendekatan kreatif, saya berkomitmen untuk membawa ide-ide abstrak menjadi produk digital yang kompetitif.
+                    </p>
+                    <div class="row g-3 py-2 border-top border-bottom my-3">
+                        <div class="col-6">
+                            <strong>Jenis Kelamin:</strong> <span class="text-muted">Perempuan</span>
+                        </div>
+                        <div class="col-6">
+                            <strong>Status:</strong> <span class="text-muted">Mahasiswa Aktif</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-4 bg-light border-start border-4 border-warning">
+                        <h4 class="font-serif italic mb-3">"Desain terbaik bukan sekadar apa yang terlihat oleh mata, melainkan bagaimana hal tersebut mempermudah dan memperkaya hidup penggunanya."</h4>
+                        <span class="text-uppercase tracking-wider font-weight-bold small text-muted">— Filosofi Kerja</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2 class="section-title">Pengalaman Kerja</h2>
+                    <p class="text-muted pe-lg-4 mt-3">Rekam jejak kontribusi profesional saya di berbagai agensi kreatif dan perusahaan rintisan teknologi selama masa studi.</p>
+                </div>
+                <div class="col-lg-8">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Januari 2025 - Sekarang</div>
+                        <h3 class="timeline-title">Lead UI/UX Designer & Product Strategist</h3>
+                        <div class="timeline-company">Nexus Digital Agency • Jakarta (Remote)</div>
+                        <p class="text-muted">Memimpin tim desainer dalam merancang antarmuka aplikasi web dan mobile untuk 5+ klien korporat berskala nasional. Berhasil meningkatkan metrik konversi pengguna sebesar 25% melalui pendekatan riset UX yang komprehensif.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Maret 2024 - Desember 2024</div>
+                        <h3 class="timeline-title">Project Management & Operations Intern</h3>
+                        <div class="timeline-company">Vortex Tech Startup • Bandung</div>
+                        <p class="text-muted">Mengkoordinasikan alur kerja antara tim pengembang (developer) dan tim kreatif. Menyusun dokumentasi teknis produk dan memastikan ketepatan waktu peluncuran fitur aplikasi hingga 95% kesuksesan target *sprint*.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Agustus 2023 - Februari 2024</div>
+                        <h3 class="timeline-title">Freelance Social Media Specialist</h3>
+                        <div class="timeline-company">Aura Aesthetic & Creative Space • Makassar</div>
+                        <p class="text-muted">Merancang strategi konten mingguan, menganalisis algoritma tren, dan mengeksekusi kampanye pemasaran digital yang berhasil mendongkrak *engagement rate* akun organik hingga 40%.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & CAREER SECTION -->
+    <section id="achievements" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-center">Pencapaian & Karir</h2>
+            </div>
+            <div class="row g-4 mt-2">
+                
+                <div class="col-md-4">
+                    <div class="achievement-card">
+                        <div class="card-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <h4>Juara 1 National UI/UX Design Competition 2025</h4>
+                        <p class="text-muted mt-3 mb-0">Meraih penghargaan tertinggi dalam kompetisi desain tingkat nasional yang diselenggarakan oleh universitas terkemuka melalui inovasi aplikasi inklusi finansial.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="achievement-card">
+                        <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                        <h4>Penerima Beasiswa Prestasi Masa Depan</h4>
+                        <p class="text-muted mt-3 mb-0">Dianugerahi beasiswa penuh atas pencapaian indeks prestasi kumulatif (IPK) yang luar biasa secara konsisten serta kontribusi aktif dalam organisasi mahasiswa.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="achievement-card">
+                        <div class="card-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                        <h4>Pembicara di Seminar Youth Tech Innovation</h4>
+                        <p class="text-muted mt-3 mb-0">Diundang sebagai salah satu panelis termuda untuk berbagi perspektif mengenai peran strategis mahasiswa perempuan dalam akselerasi industri kreatif digital.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <h2 class="section-title">Keahlian Utama</h2>
+                    <p class="text-muted mt-3 mb-4">Berikut adalah rumpun keahlian teknis dan manajerial yang terus saya asah guna menunjang produktivitas dan kualitas luaran kerja profesional saya.</p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="ps-lg-4">
+                        <div class="skill-badge">UI/UX Design (Figma)</div>
+                        <div class="skill-badge">Product Strategy</div>
+                        <div class="skill-badge">Market Research</div>
+                        <div class="skill-badge">Project Management</div>
+                        <div class="skill-badge">HTML5 & CSS3</div>
+                        <div class="skill-badge">Bootstrap Framework</div>
+                        <div class="skill-badge">Digital Marketing</div>
+                        <div class="skill-badge">Data Analysis</div>
+                        <div class="skill-badge">Public Speaking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <div class="footer-brand">IRMAYANTI<span>.</span></div>
+                    <p class="text-muted mb-0">Mari terhubung dan berkolaborasi untuk menciptakan karya digital berdampak besar berikutnya.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <div class="social-links mb-3">
+                        <a href="#" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" aria-label="Instagram Profile"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Email Contact"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <p class="small text-muted mb-0">&copy; 2026 Irmayanti. Hak Cipta Dilindungi Undang-Undang.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle & Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
